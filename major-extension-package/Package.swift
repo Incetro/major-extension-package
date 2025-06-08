@@ -4,21 +4,97 @@
 import PackageDescription
 
 let package = Package(
-    name: "major-extension-package",
+    name: "MajorExtensions",
     products: [
-        // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
-            name: "major-extension-package",
-            targets: ["major-extension-package"]),
+            name: "TCAExtensions",
+            targets: ["TCAExtensions"]
+        ),
+        .library(
+            name: "SwiftUIExtensions",
+            targets: ["SwiftUIExtensions"]
+        ),
+        .library(
+            name: "BaseTypeExtensions",
+            targets: ["BaseTypeExtensions"]
+        ),
+        .library(
+            name: "UIKitExtensions",
+            targets: ["UIKitExtensions"]
+        )
+    ],
+    dependencies: [
+        .package(
+            url: "https://github.com/Incetro/tca-extensions.git",
+            from: "1.0.0"
+        ),
+        .package(
+            url: "https://github.com/Incetro/swiftui-extensions.git",
+            from: "1.0.0"
+        ),
+        .package(
+            url: "https://github.com/Incetro/base-type-extensions.git",
+            from: "1.0.0"
+        ),
+        .package(
+            url: "https://github.com/Incetro/uikit-extensions.git",
+            from: "1.0.0"
+        )
     ],
     targets: [
-        // Targets are the basic building blocks of a package, defining a module or a test suite.
-        // Targets can depend on other targets in this package and products from dependencies.
+        // TCA Extensions
         .target(
-            name: "major-extension-package"),
-        .testTarget(
-            name: "major-extension-packageTests",
-            dependencies: ["major-extension-package"]
+            name: "TCAExtensions",
+            dependencies: [
+                .product(
+                    name: "tca-extensions",
+                    package: "tca-extensions"
+                )
+            ]
         ),
+        
+        // SwiftUI Extensions
+        .target(
+            name: "SwiftUIExtensions",
+            dependencies: [
+                .product(
+                    name: "swiftui-extensions",
+                    package: "swiftui-extensions"
+                )
+            ]
+        ),
+        
+        // Base Type Extensions
+        .target(
+            name: "BaseTypeExtensions",
+            dependencies: [
+                .product(
+                    name: "base-type-extensions",
+                    package: "base-type-extensions"
+                )
+            ]
+        ),
+        
+        // UIKit Extensions
+        .target(
+            name: "UIKitExtensions",
+            dependencies: [
+                .product(
+                    name: "uikit-extensions",
+                    package: "uikit-extensions"
+                )
+            ]
+        ),
+        
+        // Tests
+        .testTarget(
+            name: "MajorExtensionsTests",
+            dependencies: [
+                "TCAExtensions",
+                "SwiftUIExtensions",
+                "BaseTypeExtensions",
+                "UIKitExtensions"
+            ]
+        )
     ]
 )
