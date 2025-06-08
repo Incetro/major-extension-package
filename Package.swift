@@ -4,7 +4,10 @@
 import PackageDescription
 
 let package = Package(
-    name: "MajorExtensions",
+    name: "major_extension_package",
+    platforms: [
+      .iOS(.v13)
+      ],
     products: [
         .library(
             name: "TCAExtensions",
@@ -26,19 +29,19 @@ let package = Package(
     dependencies: [
         .package(
             url: "https://github.com/Incetro/tca-extensions.git",
-            from: "1.0.0"
+            branch: "master"
         ),
         .package(
             url: "https://github.com/Incetro/swiftui-extensions.git",
-            from: "1.0.0"
+            branch: "master"
         ),
         .package(
             url: "https://github.com/Incetro/base-type-extensions.git",
-            from: "1.0.0"
+            branch: "master"
         ),
         .package(
             url: "https://github.com/Incetro/uikit-extensions.git",
-            from: "1.0.0"
+            branch: "master"
         )
     ],
     targets: [
@@ -88,7 +91,7 @@ let package = Package(
         
         // Tests
         .testTarget(
-            name: "MajorExtensionsTests",
+            name: "major_extension_packageTests",
             dependencies: [
                 "TCAExtensions",
                 "SwiftUIExtensions",

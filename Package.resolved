@@ -1,6 +1,15 @@
 {
-  "originHash" : "bed2f878e1ff5dfa4ae3decfc66913e057531aab118609fc6e95ad9f61fab1ca",
+  "originHash" : "63d6442dd3021b1fca3b5ea1efb5cf32caacfc2e75f6c4f3347506f2fb576ae1",
   "pins" : [
+    {
+      "identity" : "base-type-extensions",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Incetro/base-type-extensions.git",
+      "state" : {
+        "branch" : "master",
+        "revision" : "8a3e869628d054bcb7e76d8092f48ade2991d3f6"
+      }
+    },
     {
       "identity" : "combine-schedulers",
       "kind" : "remoteSourceControl",
@@ -8,6 +17,15 @@
       "state" : {
         "revision" : "5928286acce13def418ec36d05a001a9641086f2",
         "version" : "1.0.3"
+      }
+    },
+    {
+      "identity" : "layout",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Incetro/layout.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "4f35ce37b8c4a4fe015e2fe0be09888101e73328"
       }
     },
     {
@@ -101,6 +119,15 @@
       }
     },
     {
+      "identity" : "swiftui-extensions",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Incetro/swiftui-extensions.git",
+      "state" : {
+        "branch" : "master",
+        "revision" : "2816e6ba94e533b054e4cf740723a260c8267cd2"
+      }
+    },
+    {
       "identity" : "tca",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/Incetro/TCA",
@@ -110,12 +137,30 @@
       }
     },
     {
+      "identity" : "tca-extensions",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Incetro/tca-extensions.git",
+      "state" : {
+        "branch" : "master",
+        "revision" : "0cf0f2d4aac885e072e0816afb79876e803962ba"
+      }
+    },
+    {
       "identity" : "tca-network-reducers",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/Incetro/tca-network-reducers.git",
       "state" : {
         "branch" : "master",
         "revision" : "f7bfed11f7b459157e73d81beb7f58db656c5c98"
+      }
+    },
+    {
+      "identity" : "uikit-extensions",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Incetro/uikit-extensions.git",
+      "state" : {
+        "branch" : "master",
+        "revision" : "e8ce70df3fb27a50bbf921dde7a45417e577b62f"
       }
     },
     {
